@@ -1,0 +1,212 @@
+[
+  {
+    "id": "stearns-foster-studio-medium",
+    "brand": "Stearns & Foster",
+    "title": "Studio Medium",
+    "feel": "Medium",
+    "type": "Innerspring",
+    "image": "img/products/stearns-studio-medium.jpg",
+    "tag": null,
+    "featured": false
+  },
+  {
+    "id": "stearns-foster-estate-soft",
+    "brand": "Stearns & Foster",
+    "title": "Estate Soft",
+    "feel": "Soft",
+    "type": "Innerspring",
+    "image": "img/products/stearns-estate-soft.jpg",
+    "tag": null,
+    "featured": false
+  },
+  {
+    "id": "stearns-foster-estate-ultra-firm",
+    "brand": "Stearns & Foster",
+    "title": "Estate Ultra Firm",
+    "feel": "Ultra Firm",
+    "type": "Innerspring",
+    "image": "img/products/stearns-estate-ultra-firm.jpg",
+    "tag": null,
+    "featured": false
+  },
+  {
+    "id": "stearns-foster-lux-estate-soft-pt",
+    "brand": "Stearns & Foster",
+    "title": "Lux Estate Soft Pillowtop",
+    "feel": "Soft",
+    "type": "Innerspring",
+    "image": "img/products/stearns-lux-estate-soft-pt.jpg",
+    "tag": "Luxury",
+    "featured": true
+  },
+  {
+    "id": "tempur-adapt-medium",
+    "brand": "Tempur-Pedic",
+    "title": "Adapt Medium",
+    "feel": "Medium",
+    "type": "Memory Foam",
+    "image": "img/products/tempur-adapt-medium.jpg",
+    "tag": null,
+    "featured": false
+  },
+  {
+    "id": "tempur-proadapt-medium",
+    "brand": "Tempur-Pedic",
+    "title": "ProAdapt Medium",
+    "feel": "Medium",
+    "type": "Memory Foam",
+    "image": "img/products/tempur-proadapt-medium.jpg",
+    "tag": null,
+    "featured": false
+  },
+  {
+    "id": "tempur-proadapt-medium-hybrid",
+    "brand": "Tempur-Pedic",
+    "title": "ProAdapt Medium Hybrid",
+    "feel": "Medium",
+    "type": "Hybrid",
+    "image": "img/products/tempur-proadapt-hybrid.jpg",
+    "tag": "Popular",
+    "featured": true
+  },
+  {
+    "id": "tempur-proadapt-firm",
+    "brand": "Tempur-Pedic",
+    "title": "ProAdapt Firm",
+    "feel": "Firm",
+    "type": "Memory Foam",
+    "image": "img/products/tempur-proadapt-firm.jpg",
+    "tag": null,
+    "featured": false
+  },
+  {
+    "id": "sealy-high-point-soft-hybrid",
+    "brand": "Sealy",
+    "title": "High Point II Soft Hybrid",
+    "feel": "Soft",
+    "type": "Hybrid",
+    "image": "img/products/sealy-high-point-soft.jpg",
+    "tag": null,
+    "featured": false
+  },
+  {
+    "id": "sealy-high-point-firm-hybrid",
+    "brand": "Sealy",
+    "title": "High Point II Firm Hybrid",
+    "feel": "Firm",
+    "type": "Hybrid",
+    "image": "img/products/sealy-high-point-firm.jpg",
+    "tag": null,
+    "featured": false
+  },
+  {
+    "id": "mlily-chiropro-1-firm",
+    "brand": "MLILY",
+    "title": "ChiroPro Hybrid 1.0",
+    "feel": "Firm",
+    "type": "Hybrid",
+    "image": "img/products/mlily-chiropro-1.jpg",
+    "tag": null,
+    "featured": false
+  },
+  {
+    "id": "mlily-chiropro-3-medium",
+    "brand": "MLILY",
+    "title": "ChiroPro Hybrid 3.0",
+    "feel": "Medium",
+    "type": "Hybrid",
+    "image": "img/products/mlily-chiropro-3.jpg",
+    "tag": null,
+    "featured": false
+  },
+  {
+    "id": "mlily-midnight-ice-1",
+    "brand": "MLILY",
+    "title": "Midnight ICE Hybrid 1.0",
+    "feel": "Medium",
+    "type": "Hybrid",
+    "image": "img/products/mlily-midnight-ice-1.jpg",
+    "tag": "Cooling",
+    "featured": false
+  },
+  {
+    "id": "mlily-midnight-ice-3",
+    "brand": "MLILY",
+    "title": "Midnight ICE Hybrid 3.0",
+    "feel": "Soft",
+    "type": "Hybrid",
+    "image": "img/products/mlily-midnight-ice-3.jpg",
+    "tag": "Cooling",
+    "featured": true
+  },
+  {
+    "id": "mlily-powercool-medium",
+    "brand": "MLILY",
+    "title": "PowerCool Ventilated Medium Hybrid",
+    "feel": "Medium",
+    "type": "Hybrid",
+    "image": "img/products/mlily-powercool-medium.jpg",
+    "tag": null,
+    "featured": false
+  },
+  {
+    "id": "mlily-powercool-firm",
+    "brand": "MLILY",
+    "title": "PowerCool Ventilated Firm Hybrid",
+    "feel": "Firm",
+    "type": "Hybrid",
+    "image": "img/products/mlily-powercool-firm.jpg",
+    "tag": null,
+    "featured": false
+  },
+  {
+    "id": "mlily-essentials-6",
+    "brand": "MLILY",
+    "title": "Essentials 6″ Memory Foam",
+    "feel": "Firm",
+    "type": "Memory Foam",
+    "image": "img/products/mlily-essentials-6.jpg",
+    "tag": "Value",
+    "featured": false
+  },
+  {
+    "id": "mlily-essentials-8",
+    "brand": "MLILY",
+    "title": "Essentials 8″ Memory Foam",
+    "feel": "Medium",
+    "type": "Memory Foam",
+    "image": "img/products/mlily-essentials-8.jpg",
+    "tag": "Value",
+    "featured": false
+  },
+  {
+    "id": "mlily-essentials-10",
+    "brand": "MLILY",
+    "title": "Essentials 10″ Memory Foam",
+    "feel": "Soft",
+    "type": "Memory Foam",
+    "image": "img/products/mlily-essentials-10.jpg",
+    "tag": "Value",
+    "featured": false
+  },
+  {
+    "id": "heritage-autograph-extra-firm",
+    "brand": "Heritage Sleep USA",
+    "title": "Autograph Select Extra Firm EPT",
+    "feel": "Firm",
+    "type": "Innerspring",
+    "image": "img/products/heritage-extra-firm.jpg",
+    "tag": null,
+    "featured": false
+  },
+  {
+    "id": "heritage-autograph-cushion-firm",
+    "brand": "Heritage Sleep USA",
+    "title": "Autograph Select Cushion Firm EPT",
+    "feel": "Medium",
+    "type": "Innerspring",
+    "image": "img/products/heritage-cushion-firm.jpg",
+    "tag": null,
+    "featured": false
+  }
+]
