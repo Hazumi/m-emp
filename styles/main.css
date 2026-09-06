@@ -131,9 +131,9 @@ a:visited {
   background-image: 
     linear-gradient(
       180deg,
-      rgba(12, 21, 39, 0.94) 0%,
-      rgba(12, 21, 39, 0.8) 60%,
-      rgba(12, 21, 39, 0.35) 100%
+      rgba(12, 21, 39, 0.88) 0%,
+      rgba(12, 21, 39, 0.72) 55%,
+      rgba(12, 21, 39, 0.22) 100%
     ),
     url('../img/header.jpg');
   background-position: right 24%;
@@ -147,16 +147,16 @@ a:visited {
     background-image: 
       linear-gradient(
         90deg,
-        rgba(12, 21, 39, 1) 0%,
-        rgba(12, 21, 39, 1) 40%,
-        rgba(12, 21, 39, 0.78) 62%,
-        rgba(12, 21, 39, 0.22) 82%,
+        rgba(12, 21, 39, 0.96) 0%,
+        rgba(12, 21, 39, 0.90) 35%,
+        rgba(12, 21, 39, 0.62) 65%,
+        rgba(12, 21, 39, 0.12) 85%,
         rgba(12, 21, 39, 0) 100%
       ),
       linear-gradient(
         180deg,
-        rgba(12, 21, 39, 0.2) 0%,
-        rgba(12, 21, 39, 0) 25%
+        rgba(12, 21, 39, 0.15) 0%,
+        rgba(12, 21, 39, 0) 30%
       ),
       url('../img/header.jpg');
     background-position: right 22%;
@@ -180,10 +180,12 @@ a:visited {
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: #e2e8f0;
-  background-color: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  background-color: rgba(12, 21, 39, 0.65);
+  border: 1px solid rgba(255, 255, 255, 0.25);
   backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   border-radius: 9999px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
 .badge-dot {
@@ -207,7 +209,7 @@ a:visited {
   font-size: 2.75rem;
   font-weight: 800;
   color: #ffffff;
-  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.5);
+  text-shadow: 0 3px 14px rgba(0, 0, 0, 0.75), 0 1px 3px rgba(0, 0, 0, 0.9);
 }
 
 .hero-title-bottom {
@@ -217,18 +219,16 @@ a:visited {
   font-weight: 400;
   letter-spacing: -0.01em;
   line-height: 1.05;
-  background: linear-gradient(135deg, #67e8f9 0%, #38bdf8 50%, #93c5fd 100%);
+  background: linear-gradient(135deg, #a5f3fc 0%, #38bdf8 50%, #93c5fd 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  text-shadow: 0 4px 20px rgba(56, 189, 248, 0.25);
+  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.65));
 }
 
-/* 1 Line on Desktop */
 .hero-line-part {
   display: inline;
 }
 
-/* MOBILE-ONLY HERO CLEANUP & CENTERING */
 @media (max-width: 767.98px) {
   .hero-panel {
     text-align: center;
@@ -248,7 +248,6 @@ a:visited {
     margin-top: 0.85rem;
   }
 
-  /* 2 Lines on Mobile */
   .hero-line-part {
     display: block;
   }
@@ -309,8 +308,8 @@ a:visited {
   font-family: "Figtree", ui-sans-serif, system-ui, sans-serif;
   font-size: 1.05rem;
   line-height: 1.75;
-  color: #cbd5e1;
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+  color: #e2e8f0;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.7), 0 1px 2px rgba(0, 0, 0, 0.8);
 }
 
 @media (min-width: 768px) {
@@ -338,13 +337,13 @@ a:visited {
   background-color: #ffffff;
   border: none;
   border-radius: 9999px;
-  box-shadow: 0 8px 24px -4px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 8px 24px -4px rgba(0, 0, 0, 0.5);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .hero-btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 14px 28px -6px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 14px 28px -6px rgba(0, 0, 0, 0.6);
 }
 
 .hero-btn-secondary {
@@ -356,15 +355,16 @@ a:visited {
   font-size: 0.95rem;
   font-weight: 600;
   color: #ffffff !important;
-  background-color: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  background-color: rgba(12, 21, 39, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.35);
   backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   border-radius: 9999px;
   transition: background-color 0.2s ease, transform 0.2s ease;
 }
 
 .hero-btn-secondary:hover {
-  background-color: rgba(255, 255, 255, 0.18);
+  background-color: rgba(255, 255, 255, 0.2);
   transform: translateY(-2px);
 }
 
@@ -374,7 +374,7 @@ a:visited {
   gap: 1.5rem;
   margin-top: 2.25rem;
   padding-top: 1.5rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  border-top: 1px solid rgba(255, 255, 255, 0.16);
 }
 
 .trust-item {
@@ -383,7 +383,8 @@ a:visited {
   gap: 0.45rem;
   font-size: 0.85rem;
   font-weight: 500;
-  color: #94a3b8;
+  color: #cbd5e1;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
 }
 
 .trust-item i {
@@ -730,34 +731,74 @@ a:visited {
   border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-/* CATALOG FILTERS */
-.catalog-filters {
-  margin-top: 1.5rem;
+/* MODERN CATALOG FILTER TOOLBAR */
+.catalog-toolbar {
+  background: #1e293b !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border-radius: 16px;
+  padding: 1.15rem 1.35rem;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
 }
 
-.filter-btn {
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  color: #cbd5e1;
-  padding: 0.45rem 1.1rem;
-  font-size: 0.85rem;
-  font-weight: 600;
-  border-radius: 9999px;
+.custom-filter-select {
+  background-color: #0f172a !important;
+  color: #f8fafc !important;
+  border: 1px solid rgba(255, 255, 255, 0.18) !important;
+  border-radius: 9999px !important;
+  font-size: 0.88rem !important;
+  font-weight: 600 !important;
+  padding: 0.5rem 2.4rem 0.5rem 1.15rem !important;
   cursor: pointer;
-  transition: all 0.2s ease;
+  box-shadow: none !important;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%2338bdf8' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E") !important;
+  background-repeat: no-repeat !important;
+  background-position: right 1rem center !important;
+  background-size: 12px !important;
+  transition: all 0.2s ease-in-out;
 }
 
-.filter-btn:hover {
-  background: rgba(255, 255, 255, 0.12);
-  color: #ffffff;
-  border-color: rgba(255, 255, 255, 0.3);
+.custom-filter-select:hover {
+  border-color: rgba(56, 189, 248, 0.5) !important;
+  background-color: #141f36 !important;
 }
 
-.filter-btn.active {
-  background: #0284c7;
+.custom-filter-select:focus {
+  border-color: #38bdf8 !important;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.25) !important;
+}
+
+.custom-filter-select option {
+  background-color: #0f172a;
   color: #ffffff;
-  border-color: #0284c7;
-  box-shadow: 0 4px 12px rgba(2, 132, 199, 0.35);
+  padding: 8px 12px;
+}
+
+.custom-reset-btn {
+  background: rgba(239, 68, 68, 0.12) !important;
+  color: #f87171 !important;
+  border: 1px solid rgba(239, 68, 68, 0.35) !important;
+  border-radius: 9999px !important;
+  font-size: 0.84rem !important;
+  font-weight: 700 !important;
+  padding: 0.48rem 1rem !important;
+  display: inline-flex;
+  align-items: center;
+  transition: all 0.2s ease-in-out;
+}
+
+.custom-reset-btn:hover {
+  background-color: #ef4444 !important;
+  color: #ffffff !important;
+  border-color: #ef4444 !important;
+  box-shadow: 0 4px 14px rgba(239, 68, 68, 0.35);
+  transform: translateY(-1px);
+}
+
+.catalog-result-count {
+  font-size: 0.88rem;
+  color: #94a3b8;
+  font-weight: 500;
 }
 
 /* SHOWROOM LIVE BADGE */
@@ -1016,45 +1057,18 @@ a:visited {
   color: #38bdf8;
 }
 
-/* Centered Block with Left-Aligned Details */
-.footer-centered-contact {
+.footer-contact-strip {
   display: flex;
+  flex-wrap: wrap;
+  align-items: center;
   justify-content: center;
-}
-
-.footer-contact-inner {
-  display: inline-block;
-  text-align: left;
-}
-
-.footer-centered-contact .footer-link {
-  color: #94a3b8;
+  gap: 0.75rem 1.25rem;
   font-size: 0.92rem;
-  line-height: 1.6;
-  transition: color 0.2s ease;
+  color: #94a3b8;
 }
 
-.footer-centered-contact .footer-link:hover {
-  color: #38bdf8;
-}
-
-/* Footer Address Responsive Control */
-.footer-desktop-br {
-  display: inline;
-}
-
-.footer-inline-comma {
-  display: none;
-}
-
-@media (max-width: 767.98px) {
-  .footer-desktop-br {
-    display: none;
-  }
-  
-  .footer-inline-comma {
-    display: inline;
-  }
+.footer-divider-dot {
+  color: #475569;
 }
 
 .footer-bottom {
@@ -1079,20 +1093,6 @@ a:visited {
   transform: translateY(-1px);
 }
 
-.footer-contact-strip {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  gap: 0.75rem 1.25rem;
-  font-size: 0.92rem;
-  color: #94a3b8;
-}
-
-.footer-divider-dot {
-  color: #475569;
-}
-
 #about,
 #products,
 #locations {
@@ -1101,4 +1101,31 @@ a:visited {
 
 html {
   scroll-behavior: smooth;
+}
+
+/* FLOATING BRAND LOGO */
+.product-brand-badge {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  z-index: 2;
+  background: none;
+  border: none;
+  box-shadow: none;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.brand-badge-img {
+  height: 24px;
+  width: auto;
+  max-width: 90px;
+  object-fit: contain;
+  display: block;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.75));
 }

@@ -1,9 +1,50 @@
 document.addEventListener('DOMContentLoaded', () => {
   const grid = document.getElementById('product-grid');
   const noProducts = document.getElementById('no-products');
-  const filterBtns = document.querySelectorAll('.filter-btn');
+  const countSpan = document.getElementById('product-count');
   const isHomepage = document.body.dataset.page === 'home';
+
+  // Filter Dropdown Elements
+  const brandSelect = document.getElementById('filter-brand');
+  const feelSelect = document.getElementById('filter-feel');
+  const typeSelect = document.getElementById('filter-type');
+  const resetBtn = document.getElementById('filter-reset-btn');
+
   let products = [];
+
+  // Map brands to their graphic assets
+  const brandLogos = {
+    'Stearns & Foster': 'img/brands/stearnsfoster.svg',
+    'Stearns and Foster': 'img/brands/stearnsfoster.svg',
+    'Tempur-Pedic': 'img/brands/tempur-pedic.svg',
+    'Tempurpedic': 'img/brands/tempur-pedic.svg',
+    'Sealy': 'img/brands/sealy.svg',
+    'Heritage Sleep USA': 'img/brands/heritagesleep.png',
+    'Heritage Sleep': 'img/brands/heritagesleep.png',
+    'Heritage': 'img/brands/heritagesleep.png'
+  };
+
+  // Select the appropriate brand logo based on product details
+  function getProductLogo(p) {
+    if (!p.brand) return null;
+    const brandClean = p.brand.trim().toLowerCase();
+
+    // MLILY logic: Essentials gets mlily.png, all other models get mlily-white.png
+    if (brandClean.includes('mlily')) {
+      const isEssentials = (p.title && p.title.toLowerCase().includes('essentials')) || 
+                           (p.id && p.id.toLowerCase().includes('essentials'));
+      return isEssentials ? 'img/brands/mlily.png' : 'img/brands/mlily-white.png';
+    }
+
+    if (brandLogos[p.brand]) return brandLogos[p.brand];
+
+    if (brandClean.includes('stearns')) return 'img/brands/stearnsfoster.svg';
+    if (brandClean.includes('tempur')) return 'img/brands/tempur-pedic.svg';
+    if (brandClean.includes('sealy')) return 'img/brands/sealy.svg';
+    if (brandClean.includes('heritage')) return 'img/brands/heritagesleep.png';
+
+    return null;
+  }
 
   // Group items by brand and randomize brand order
   function shuffleBrandGroups(items) {
@@ -36,7 +77,6 @@ document.addEventListener('DOMContentLoaded', () => {
         const featured = products.filter(p => p.featured);
         renderProducts(featured.length ? featured : products.slice(0, 3));
 
-        // Re-scroll down to the anchor (e.g. #locations) after products finish loading
         if (window.location.hash) {
           const target = document.querySelector(window.location.hash);
           if (target) {
@@ -59,6 +99,10 @@ document.addEventListener('DOMContentLoaded', () => {
   function renderProducts(items) {
     if (!grid) return;
 
+    if (countSpan) {
+      countSpan.textContent = items.length;
+    }
+
     if (!items.length) {
       grid.innerHTML = '';
       if (noProducts) noProducts.classList.remove('d-none');
@@ -67,7 +111,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (noProducts) noProducts.classList.add('d-none');
 
-    // Homepage keeps 3-across (col-lg-4), Catalog page uses 4-across (col-xl-3)
     const colClass = isHomepage 
       ? 'col-12 col-md-6 col-lg-4' 
       : 'col-12 col-md-6 col-lg-4 col-xl-3';
@@ -77,12 +120,18 @@ document.addEventListener('DOMContentLoaded', () => {
         ? `<span class="product-tag ${p.tag.toLowerCase() === 'cooling' ? 'tag-accent' : ''}">${p.tag}</span>` 
         : '';
 
+      const logoSrc = getProductLogo(p);
+      const logoBadgeHtml = logoSrc 
+        ? `<div class="product-brand-badge"><img src="${logoSrc}" alt="${p.brand} logo" class="brand-badge-img"></div>` 
+        : '';
+
       return `
         <div class="${colClass}">
           <div class="product-card">
             ${tagHtml}
             <div class="product-img-wrap">
               <img src="${p.image}" alt="${p.brand} ${p.title}" class="product-img" loading="lazy">
+              ${logoBadgeHtml}
             </div>
             <div class="product-body">
               <span class="product-brand">${p.brand}</span>
@@ -106,23 +155,46 @@ document.addEventListener('DOMContentLoaded', () => {
     }).join('');
   }
 
-  // Filter Buttons
-  if (filterBtns.length) {
-    filterBtns.forEach(btn => {
-      btn.addEventListener('click', () => {
-        filterBtns.forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
+  // Combined Multi-Select Filter Logic
+  function applyFilters() {
+    if (!brandSelect || !feelSelect || !typeSelect) return;
 
-        const filterValue = btn.getAttribute('data-filter');
+    const selectedBrand = brandSelect.value;
+    const selectedFeel = feelSelect.value;
+    const selectedType = typeSelect.value;
 
-        if (filterValue === 'all') {
-          renderProducts(products);
-        } else {
-          const [key, val] = filterValue.split(':');
-          const filtered = products.filter(p => p[key] && p[key].toLowerCase() === val.toLowerCase());
-          renderProducts(filtered);
-        }
-      });
+    const isFiltered = selectedBrand !== 'all' || selectedFeel !== 'all' || selectedType !== 'all';
+
+    if (resetBtn) {
+      if (isFiltered) {
+        resetBtn.classList.remove('d-none');
+      } else {
+        resetBtn.classList.add('d-none');
+      }
+    }
+
+    const filtered = products.filter(p => {
+      const matchesBrand = selectedBrand === 'all' || (p.brand && p.brand.toLowerCase() === selectedBrand.toLowerCase());
+      const matchesFeel = selectedFeel === 'all' || (p.feel && p.feel.toLowerCase() === selectedFeel.toLowerCase());
+      const matchesType = selectedType === 'all' || (p.type && p.type.toLowerCase() === selectedType.toLowerCase());
+
+      return matchesBrand && matchesFeel && matchesType;
+    });
+
+    renderProducts(filtered);
+  }
+
+  // Event Listeners for Filters
+  if (brandSelect) brandSelect.addEventListener('change', applyFilters);
+  if (feelSelect) feelSelect.addEventListener('change', applyFilters);
+  if (typeSelect) typeSelect.addEventListener('change', applyFilters);
+
+  if (resetBtn) {
+    resetBtn.addEventListener('click', () => {
+      brandSelect.value = 'all';
+      feelSelect.value = 'all';
+      typeSelect.value = 'all';
+      applyFilters();
     });
   }
 });

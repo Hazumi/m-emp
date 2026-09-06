@@ -80,46 +80,86 @@
                 <span class="section-eyebrow text-info">Leland Showroom Inventory</span>
                 <h1 class="text-white h2">Explore Our Mattress Collection</h1>
                 <p class="text-slate-400 max-w-xl mx-auto">
-                    Filter by firmness or mattress type below. Visit our showroom in Waterford of the Carolinas to test them in person.
+                    Filter by brand, firmness, or mattress type below. Visit our showroom in Waterford of the Carolinas to test them in person.
                 </p>
             </div>
 
-            <!-- Full Filter Pill Bar -->
-            <div class="catalog-filters mb-5 d-flex flex-wrap justify-content-center gap-2">
-                <button class="filter-btn active" data-filter="all">All Models</button>
-                <button class="filter-btn" data-filter="feel:Soft">Soft</button>
-                <button class="filter-btn" data-filter="feel:Medium">Medium</button>
-                <button class="filter-btn" data-filter="feel:Firm">Firm</button>
-                <button class="filter-btn" data-filter="type:Hybrid">Hybrids</button>
-                <button class="filter-btn" data-filter="type:Memory Foam">Memory Foam</button>
-                <button class="filter-btn" data-filter="type:Innerspring">Innerspring</button>
+            <!-- Modern Filter Toolbar -->
+            <div class="catalog-toolbar mb-5">
+                <div class="row align-items-center g-3">
+                    <div class="col-lg-9 col-md-12">
+                        <div class="d-flex flex-wrap align-items-center gap-2">
+                            <!-- Brand Filter -->
+                            <div class="filter-dropdown-wrap">
+                                <select id="filter-brand" class="form-select custom-filter-select" aria-label="Filter by Brand">
+                                    <option value="all">All Brands</option>
+                                    <option value="Stearns & Foster">Stearns & Foster</option>
+                                    <option value="Tempur-Pedic">Tempur-Pedic</option>
+                                    <option value="Sealy">Sealy</option>
+                                    <option value="MLILY">MLILY</option>
+                                    <option value="Heritage Sleep USA">Heritage Sleep</option>
+                                </select>
+                            </div>
+
+                            <!-- Feel Filter -->
+                            <div class="filter-dropdown-wrap">
+                                <select id="filter-feel" class="form-select custom-filter-select" aria-label="Filter by Feel">
+                                    <option value="all">All Feels</option>
+                                    <option value="Soft">Soft</option>
+                                    <option value="Medium">Medium</option>
+                                    <option value="Firm">Firm</option>
+                                    <option value="Ultra Firm">Ultra Firm</option>
+                                </select>
+                            </div>
+
+                            <!-- Type Filter -->
+                            <div class="filter-dropdown-wrap">
+                                <select id="filter-type" class="form-select custom-filter-select" aria-label="Filter by Type">
+                                    <option value="all">All Types</option>
+                                    <option value="Hybrid">Hybrid</option>
+                                    <option value="Innerspring">Innerspring</option>
+                                    <option value="Memory Foam">Memory Foam</option>
+                                </select>
+                            </div>
+
+                            <!-- Reset Button -->
+                            <button type="button" id="filter-reset-btn" class="custom-reset-btn d-none">
+                                <i class="fas fa-undo-alt me-1"></i> Reset
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Counter Indicator -->
+                    <div class="col-lg-3 col-md-12 text-lg-end">
+                        <span class="catalog-result-count">
+                            Showing <strong id="product-count" class="text-white">0</strong> models
+                        </span>
+                    </div>
+                </div>
             </div>
 
             <!-- Product Grid -->
             <div class="row g-4" id="product-grid"></div>
 
             <div id="no-products" class="text-center py-5 d-none">
-                <p class="text-slate-400 mb-0">No mattresses match that filter right now.</p>
+                <p class="text-slate-400 mb-0">No mattresses match that filter combination right now.</p>
             </div>
         </div>
     </section>
 
     <footer class="custom-footer">
         <div class="container text-center">
-            <!-- Brand & Micro-Tagline Above Links -->
             <div class="footer-center-brand mb-4">
                 <h3 class="footer-brand">MATTRESS EMPORIUM</h3>
                 <p class="footer-micro-tagline mb-0">Locally Owned Sleep Specialists</p>
             </div>
 
-            <!-- Centered Navigation Links -->
             <ul class="footer-centered-nav mb-4">
                 <li><a href="index.html#about" class="footer-link">Why Us</a></li>
                 <li><a href="products.html" class="footer-link">Products</a></li>
                 <li><a href="index.html#locations" class="footer-link">Location & Hours</a></li>
             </ul>
 
-            <!-- Centered Wrapper with Left-Aligned Contact Details -->
             <div class="footer-contact-strip mb-4">
                 <a href="https://maps.google.com/?q=2013+Olde+Regent+Way+%23160+Leland+NC+28451" target="_blank" rel="noopener noreferrer" class="footer-link">
                     <i class="fas fa-map-marker-alt text-info me-2"></i>2013 Olde Regent Way, Suite 160, Leland, NC 28451
@@ -130,7 +170,6 @@
                 </a>
             </div>
 
-            <!-- Bottom Bar: Centered Copyright & Right Facebook -->
             <div class="footer-bottom">
                 <div class="row align-items-center">
                     <div class="col-md-4 d-none d-md-block"></div>
