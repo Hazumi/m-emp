@@ -1122,9 +1122,9 @@ html {
 }
 
 .brand-badge-img {
-  height: 24px;
+  height: 34px;
   width: auto;
-  max-width: 90px;
+  max-width: 115px;
   object-fit: contain;
   display: block;
   filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.75));
