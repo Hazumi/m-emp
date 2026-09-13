@@ -208,5 +208,15 @@
     "image": "img/products/heritage-cushion-firm.jpg",
     "tag": null,
     "featured": false
+  },
+  {
+    "id": "sealy-albany-ii-medium-hybrid",
+    "brand": "Sealy",
+    "title": "Albany II Medium Hybrid",
+    "feel": "Medium",
+    "type": "Hybrid",
+    "image": "img/products/sealy-albany-medium.jpg",
+    "tag": null,
+    "featured": false
   }
 ]
